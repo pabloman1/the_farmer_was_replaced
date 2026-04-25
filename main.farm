@@ -1,0 +1,13 @@
+import funciones
+
+#funciones.activa_ayuda(Items.Water)
+#funciones.activa_ayuda(Items.Weird_Substance)
+#funciones.activa_ayuda(Items.Fertilizer)
+#funciones.explota(Entities.Bush, Grounds.Soil, 1)
+#funciones.explota(Entities.Tree, Grounds.Soil, 2)
+#funciones.explota(Entities.Carrot, Grounds.Soil, 1)
+#funciones.explota(Entities.Pumpkin, Grounds.Soil, 1)
+#funciones.explota(Entities.Grass, Grounds.Grassland,1)
+#funciones.calabazas()
+#funciones.harvest_all()
+harvest()

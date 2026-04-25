@@ -1,6 +1,6 @@
-def explota(cultivo, tierra):
+def explota(cultivo, tierra, pasos):
 	# se puede intentar hacer un diccionario con los cultivos y su tierra correspondiente para no tener que hacer tantos if	
-	#cultivos_tierra = {cultivo: tierra}
+	#cultivos_tierra = {cultivo: tierra},
 	while True:
 		for i in range(get_world_size()):
 			for i in range(get_world_size()):
@@ -10,5 +10,40 @@ def explota(cultivo, tierra):
 					if get_ground_type()!=tierra: 
 						till()
 					plant(cultivo)
+				move_n(North, pasos)
+			move_n(East, pasos)
+
+
+def move_n(dirección, pasos):
+	for i in range(pasos):
+		move(dirección)
+		
+def activa_ayuda(ayuda):	
+	for i in range(get_world_size()):
+			for i in range(get_world_size()):
+				use_item(ayuda)
 				move(North)
 			move(East)
+			
+			
+def harvest_all():
+	for i in range(get_world_size()):
+		for i in range(get_world_size()):
+			if can_harvest():
+				harvest()
+				move(North)
+		move(East)				
+			
+def calabazas():
+	harvest_all()
+	calabazas_muertas=True
+	while calabazas_muertas:
+		calabazas_muertas=False
+		for i in range(get_world_size()):
+				for i in range(get_world_size()):
+					if get_entity_type()==Entities.Dead_Pumpkin or get_entity_type()==None:
+						plant(Entities.Pumpkin)
+						calabazas_muertas=True
+					move(North) 
+				move(East)	
+	harvest()		
