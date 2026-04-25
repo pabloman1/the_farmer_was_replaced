@@ -1,0 +1,14 @@
+def explota(cultivo, tierra):
+	# se puede intentar hacer un diccionario con los cultivos y su tierra correspondiente para no tener que hacer tantos if	
+	#cultivos_tierra = {cultivo: tierra}
+	while True:
+		for i in range(get_world_size()):
+			for i in range(get_world_size()):
+				if can_harvest():
+					harvest()
+				if get_entity_type()!=cultivo:
+					if get_ground_type()!=tierra: 
+						till()
+					plant(cultivo)
+				move(North)
+			move(East)
