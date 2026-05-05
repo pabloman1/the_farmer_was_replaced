@@ -1,5 +1,10 @@
+# Este es el módulo de Funciones que contiene funciones que pueden ser utilizadas en el módulo principal para realizar tareas específicas relacionadas con la agricultura, como plantar cultivos, cosechar, activar ayudas, etc.
+
+# Esta función se encarga de plantar un cultivo específico en una tierra específica, 
+# y luego moverse en una dirección específica durante un número determinado de pasos. 
 def explota(cultivo, tierra, pasos):
-	# se puede intentar hacer un diccionario con los cultivos y su tierra correspondiente para no tener que hacer tantos if	
+	# En su momento, se puede intentar hacer un diccionario con los 
+	#cultivos y su tierra correspondiente para no tener que hacer tantos if	
 	#cultivos_tierra = {cultivo: tierra},
 	while True:
 		for i in range(get_world_size()):
@@ -13,11 +18,13 @@ def explota(cultivo, tierra, pasos):
 				move_n(North, pasos)
 			move_n(East, pasos)
 
-
+# Esta función se encarga de moverse en una dirección específica durante un número determinado de pasos.
 def move_n(dirección, pasos):
 	for i in range(pasos):
 		move(dirección)
-		
+
+# Esta función se encarga de activar una ayuda específica, y luego moverse en una dirección específica durante un número determinado de pasos.	
+# Las ayudas pueden ser cosas como fertilizantes, pesticidas, etc. que pueden ayudar a mejorar el crecimiento de los cultivos o protegerlos de plagas.	
 def activa_ayuda(ayuda):	
 	for i in range(get_world_size()):
 			for i in range(get_world_size()):
@@ -25,7 +32,7 @@ def activa_ayuda(ayuda):
 				move(North)
 			move(East)
 			
-			
+# Esta función se encarga de cosechar todos los cultivos que se pueden cosechar en el mundo, y luego moverse en una dirección específica durante un número determinado de pasos.			
 def harvest_all():
 	for i in range(get_world_size()):
 		for i in range(get_world_size()):
@@ -34,6 +41,8 @@ def harvest_all():
 				move(North)
 		move(East)				
 			
+# Esta función se encarga de cosechar todas calabazas, haciendo varias pasadas para asegurarse de que todas las calabazas muertas sean reemplazadas por nuevas calabazas.
+# De esta forma permite crear una gran calabaza que maximiza el rendimiento de la cosecha.
 def calabazas():
 	harvest_all()
 	calabazas_muertas=True

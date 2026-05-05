@@ -1,6 +1,0 @@
-def activa_riego():	
-	for i in range(get_world_size()):
-			for i in range(get_world_size()):
-				use_item(Items.Water)
-				move(North)
-			move(East)
