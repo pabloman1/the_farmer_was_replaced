@@ -1,9 +1,9 @@
 # The farmer was replaced
 
-En este repositorio iré dejando mis avances en la programamcion de funciones.
-El esquema es bastante directo, las funciones se almacenan en un modulo denominado funciones, estas funciones deberán ser llamadas desde el modulo main.
+En este repositorio iré dejando mis avances en la programacion de funciones.
+El esquema es bastante directo, las funciones se almacenan en un modulo denominado funciones, estas funciones deberán ser llamadas desde main.
 
-Hasta el momento no sé si se pueden inportar archivos de codigo al juego, por lo que la manera de utilizar el codigo es copiar y pegar a las cajas de texto que proporciona el juego y continuar desde allí.
+Hasta el momento no sé si se pueden inportar archivos de codigo al juego, por lo que la manera directa de utilizar el codigo es copiar y pegar a las cajas de texto que proporciona el juego y continuar desde allí.
 
 ## Diagrama de main con módulo funciones
 
